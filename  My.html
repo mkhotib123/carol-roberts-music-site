@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carol Roberts – Signature</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.ibb.co/yFcrKM5/ocean-loop.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.55);
+      padding: 2rem;
+      margin: 4rem auto 2rem;
+      max-width: 700px;
+      border-radius: 14px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.tagline {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .upload-section {
+      margin-top: 3rem;
+      background: rgba(0,0,0,0.5);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    input[type="file"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <h1>Carol Roberts</h1>
+    <p class="tagline">Music with a heartbeat — born in Texas, powered by soul.</p>
+    <p>Hey, I'm Carol — a music maker, truth-seeker, and rhythm junkie from the Lone Star State.<br>
+    I grew up not knowing my dad, but around 28, life dropped the beat: I found him.<br>
+    That changed me — and so did my music.</p>
+    <p>Now I make tracks that feel like moments: sometimes loud, sometimes soft, always real.</p>
+  </div>
+
+  <div class="upload-section">
+    <h2>Upload a Track</h2>
+    <input type="file" accept="audio/*" onchange="playTrack(event)" />
+    <audio controls id="audioPlayer">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <footer>
+    &copy; 2025 Carol Roberts — Signature Vibes
+  </footer>
+
+  <script>
+    function playTrack(event) {
+      const file = event.target.files[0];
+      const audio = document.getElementById('audioPlayer');
+      if (file) {
+        const url = URL.createObjectURL(file);
+        audio.src = url;
+        audio.play();
+      }
+    }
+  </script>
+
+</body>
+</html>
