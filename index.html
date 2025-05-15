@@ -4,100 +4,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carol Roberts – Ocean of Sound</title>
+  <title>Signature – Carol Roberts</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
+      background: linear-gradient(to bottom, #bfefff, #e6f7ff);
+      color: #002b5b;
     }
     header {
       text-align: center;
-      max-width: 800px;
-    }
-    img.logo {
-      width: 250px;
-      margin-bottom: 1rem;
+      padding: 2rem;
+      background: rgba(255,255,255,0.7);
     }
     h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-      color: #ffdddd;
+      font-size: 3rem;
+      color: #007acc;
+      margin: 0;
     }
     p.tagline {
-      font-style: italic;
       font-size: 1.25rem;
-      margin-bottom: 1rem;
+      font-style: italic;
     }
-    .bio {
-      background: rgba(0,0,0,0.5);
+    .section {
+      max-width: 800px;
+      margin: 2rem auto;
       padding: 1.5rem;
-      border-radius: 10px;
-      line-height: 1.6;
-      max-width: 600px;
-      text-align: center;
-      margin: 2rem 0;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
     }
-    .player-section {
-      margin-top: 2rem;
-      max-width: 600px;
-      width: 100%;
-      text-align: center;
+    .track {
+      margin-bottom: 1.5rem;
     }
     audio {
       width: 100%;
-      margin-top: 1rem;
+    }
+    .newsletter form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input[type="email"], button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #0077cc;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
     footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #333;
     }
   </style>
 </head>
+
 <body>
+  <div class="ocean-bg"></div>
+  <style>
+    .ocean-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: url('https://cdn.pixabay.com/animation/2023/05/04/00/51/00-51-48-878_512.gif') center center / cover no-repeat;
+      animation: float 30s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes float {
+      0% { background-position: center 0; }
+      100% { background-position: center 100px; }
+    }
+  </style>
+
 
   <header>
-    <img src="carol_roberts_logo.png" alt="Carol Roberts Logo" class="logo" />
-    <h1>Carol Roberts</h1>
-    <p class="tagline">Music with a heartbeat — born in Texas, powered by soul.</p>
+    <h1>SIGNATURE</h1>
+    <p class="tagline">By Carol Roberts — Music That Leaves a Mark</p>
   </header>
 
-  <div class="bio">
-    <p>Hey, I'm Carol — a music maker, truth-seeker, and rhythm junkie from the Lone Star State.</p>
-    <p>I grew up not knowing my dad, but around 28, life dropped the beat: I found him. That changed me — and so did my music.</p>
-    <p>Now I make tracks that feel like moments: sometimes loud, sometimes soft, always real.</p>
+  <div class="section">
+    <h2>Now Playing</h2>
+    
+    <div class="track">
+        <h4>Like</h4>
+        <audio controls>
+            <source src="Like_20250422_0149.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <div class="track">
+        <h4>Hugg (Late Session)</h4>
+        <audio controls>
+            <source src="Hugg_20250424_2106.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <div class="track">
+        <h4>Hy</h4>
+        <audio controls>
+            <source src="Hy_20250424_1824.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <div class="track">
+        <h4>Unreleased Track</h4>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <div class="track">
+        <h4>Vibes of the Night</h4>
+        <audio controls>
+            <source src="Vibes of the Night.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <div class="track">
+        <h4>Dream Pulse</h4>
+        <audio controls>
+            <source src="Avicii.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <div class="track">
+        <h4>Hugg (Early Cut)</h4>
+        <audio controls>
+            <source src="Hugg_20250422_0150.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    <div class="track">
+        <h4>Studio Pulse</h4>
+        <audio controls>
+            <source src="audio 2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
   </div>
 
-  <div class="player-section">
-    <h2>Upload a Track</h2>
-    <input type="file" accept="audio/*" onchange="playTrack(event)" />
-    <audio controls id="audioPlayer">
-      Your browser does not support the audio element.
-    </audio>
+  <div class="section newsletter">
+    <h2>Join the Drop List</h2>
+    <p>Be the first to hear new releases, drops, and behind-the-beat blogs.</p>
+    <form action="https://formsubmit.co/carolrobertsmusic@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Your email" required>
+      <input type="hidden" name="_autoresponse" value="Thanks for joining Signature! You’ll get alerts when new music drops.">
+      <input type="hidden" name="_template" value="box">
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Blog: Behind the Beats</h2>
+    <h4>April 2025 – Found My Flow</h4>
+    <p>Been vibin’ in the studio with the waves crashing outside and headphones blasting inside. That’s how ‘Vibes of the Night’ was born — one of my most honest tracks to date.</p>
+
+    <h4>March 2025 – Late Night Reflection</h4>
+    <p>This track was born from a reflective night session. Pure emotion, no filter. 'Dream Pulse' carries that late-hour spirit when the world feels quiet and full of melody.</p>
   </div>
 
   <footer>
-    © 2025 Carol Roberts. Made with soul, waves, and Texas sunshine.
+    &copy; 2025 Signature by Carol Roberts. Feel the frequency.
   </footer>
-
-  <script>
-    function playTrack(event) {
-      const file = event.target.files[0];
-      const audio = document.getElementById('audioPlayer');
-      if (file) {
-        const url = URL.createObjectURL(file);
-        audio.src = url;
-        audio.play();
-      }
-    }
-  </script>
 
 </body>
 </html>
